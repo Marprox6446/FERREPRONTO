@@ -1,0 +1,245 @@
+<?php include 'productos.php'; ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo_FerrePronto</title>
+  <link rel="icon" href="img/logo.ico">
+  <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+  <header class="menu">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo de la Página">
+    </div>
+    <nav>
+      <ul class="menu-items">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="atencion.html">Atención al Clientes</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="carrito.html">Pago</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Marcas</a>
+          <ul class="dropdown-menu">
+            <li><a href="#marca1"><img src="img/truper.jpg" alt="Marca 1" class="dropdown-img"></a></li>
+            <li><a href="#marca2"><img src="img/urrea.png" alt="Marca 2" class="dropdown-img"></a></li>
+            <li><a href="#marca3"><img src="img/foset.jpg" alt="Marca 3" class="dropdown-img"></a></li>
+            <li><a href="#marca4"><img src="img/lion2.jpg" alt="Marca 4" class="dropdown-img"></a></li>
+            <li><a href="#marca5"><img src="img/volteck.png" alt="Marca 5" class="dropdown-img"></a></li>
+            <li><a href="#marca6"><img src="img/pretul.jpg" alt="Marca 2" class="dropdown-img"></a></li>
+            <li><a href="#marca7"><img src="img/iusa_2.jpg" alt="Marca 5" class="dropdown-img"></a></li>
+            <li><a href="#marca8"><img src="img/hermex.png" alt="Marca 5" class="dropdown-img"></a></li>
+            <li><a href="#marca9"><img src="img/tornillin.png" alt="Marca 5" class="dropdown-img"></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>  
+
+  <main>
+    <section class="catalogo">
+      <h2>Catálogo de Productos Especiales</h2>
+      <div class="productos-grid">
+        <!-- Producto 1 -->
+        <div class="producto">
+          
+            <button class="btn-comprar" onclick="agregarAlCarrito('Taladro Industrial', 2499.00)">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+          <img src="img/caja.gif" alt="Caja de Herramientas" class="producto-img">
+          <div class="producto-info">
+            <h3>Caja de Herramientas</h3>
+            <p>Es un contenedor organizado de metal o plástico, que se utiliza para organizar, guardar y transportar herramientas. Su utilidad es permitir un fácil acceso y almacenamiento de las herramientas, lo que hace que sean más fáciles de encontrar y transportar.</p>
+            <p class="precio">$1,199.00 MXN</p>
+            <button class="btn-comprar" onclick="agregarAlCarrito('Caja de Herramientas', 1,199.00)">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Más productos -->
+      </div>
+    </section>
+
+    <!-- Secciones de las marcas -->
+    <section id="marca1" class="marca">
+      <h2 class="titulo-marca">TRUPER</h2>
+      <p class="informacion-marca">Información sobre los productos Truper...</p>        
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/sujetadores.jpg" alt="Taladro Truper" class="producto-img">
+          <div class="producto-info">
+            <h3>Juego De 4 Sujetadores Con Matraca Carga Máx 675 Kg</h3>
+            <p class="precio">$376.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="productos-grid">
+          <div class="producto">
+            <img src="img/Piedra_para_asentar.png" alt="Taladro Truper" class="producto-img">
+            <div class="producto-info">
+              <h3>Piedra Para Asentar 150 Mm, Doble Grano 150 Y 240</h3>
+              <p class="precio">$90.00 MXN</p>
+              <button class="btn-comprar">Añadir al carrito</button>
+            </div>
+          </div>
+          <div class="productos-grid">
+            <div class="producto">
+              <img src="img/azador.png" alt="Taladro Truper" class="producto-img">
+              <div class="producto-info">
+                <h3>Azadon Lane #1 1.6 Lb Con Mango Truper</h3>
+                <p class="precio">$395.00 MXN</p>
+                <button class="btn-comprar">Añadir al carrito</button>
+              </div>
+            </div>
+        <!-- Puedes agregar más productos de Truper aquí -->
+      </div>
+    </section>
+
+    <section id="marca2" class="marca">
+      <h2 class="titulo-marca">URREA</h2>
+      <p class="informacion-marca">Información sobre los productos urrea...</p>   
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/taladro_urrea.jpg" alt="Taladro Urrea" class="producto-img">
+          <div class="producto-info">
+            <h3>Taladro Urrea</h3>
+            <p class="precio">$2,299.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de Urrea -->
+      </div>
+    </section>
+
+    <section id="marca3" class="marca">
+      <h2 class="titulo-marca">FOSET</h2>
+      <p class="informacion-marca">Información sobre los productos foset...</p>  
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/pumpa_foset.jpg" alt="Bomba Foset" class="producto-img">
+          <div class="producto-info">
+            <h3>Bomba Foset</h3>
+            <p class="precio">$1,799.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de Foset -->
+      </div>
+    </section>
+
+    <section id="marca4" class="marca">
+      <h2 class="titulo-marca">LION</h2>
+      <p class="informacion-marca">Información sobre los productos lion...</p>  
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/lion_herramientas.jpg" alt="Herramientas Lion" class="producto-img">
+          <div class="producto-info">
+            <h3>Herramientas Lion</h3>
+            <p class="precio">$999.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de Lion -->
+      </div>
+    </section>
+
+    <section id="marca5" class="marca">
+      <h2 class="titulo-marca">VOLTECK</h2>
+      <p class="informacion-marca">Información sobre los productos volteck...</p>  
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/volteck_cables.jpg" alt="Cables Volteck" class="producto-img">
+          <div class="producto-info">
+            <h3>Cables Volteck</h3>
+            <p class="precio">$499.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de Volteck -->
+      </div>
+    </section>
+
+    <section id="marca6" class="marca">
+      <h2 class="titulo-marca">PRETUL</h2>
+      <p class="informacion-marca">Información sobre los productos pretul...</p>  
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/pretul_herramientas.jpg" alt="Herramientas Pretul" class="producto-img">
+          <div class="producto-info">
+            <h3>Herramientas Pretul</h3>
+            <p class="precio">$799.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de Pretul -->
+      </div>
+    </section>
+
+    <section id="marca7" class="marca">
+      <h2 class="titulo-marca">IUSA</h2>
+      <p class="informacion-marca">Información sobre los productos iusa...</p>  
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/iusaelectrico.jpg" alt="Electrico IUSA" class="producto-img">
+          <div class="producto-info">
+            <h3>Electrico IUSA</h3>
+            <p class="precio">$1,499.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de IUSA -->
+      </div>
+    </section>
+
+    <section id="marca8" class="marca">
+      <h2 class="titulo-marca">HERMEX</h2>
+      <p class="informacion-marca">Información sobre los productos hermex...</p>  
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/hermex_bombas.jpg" alt="Bombas Hermex" class="producto-img">
+          <div class="producto-info">
+            <h3>Bombas Hermex</h3>
+            <p class="precio">$2,099.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de Hermex -->
+      </div>
+    </section>
+
+    <section id="marca9" class="marca">
+      <h2 class="titulo-marca">TORNILLIN</h2>
+      <p class="informacion-marca">Información sobre los productos tornillin...</p>  
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="img/tornillin_tornillos.jpg" alt="Tornillos Tornillin" class="producto-img">
+          <div class="producto-info">
+            <h3>Tornillos Tornillin</h3>
+            <p class="precio">$350.00 MXN</p>
+            <button class="btn-comprar">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agregar más productos de Tornillin -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Ferrepronto. Todos los derechos reservados.</p>
+        <div class="social-buttons">
+            <a href="#" class="social-btn facebook" title="Facebook">🔵</a>
+            <a href="#" class="social-btn whatsapp" title="WhatsApp">💚</a>
+            <a href="#" class="social-btn twitter" title="Twitter">🐦</a>
+        </div>
+        <div class="additional-info">
+            <p>Este es un apartado de información adicional. Aquí puedes agregar más detalles acerca de la empresa, servicios, o cualquier otro dato importante.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/catalogo.js"></script>
+
+</body>
+</html>

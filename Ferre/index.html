@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FerrePronto</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="PHP/descuentos.php">
+  <link rel="icon" href="img/logo.ico">
+  <!-- Fuente mecánica -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Logo Ferrepronto" class="logo">
+      </div>
+
+      <!-- Nombre centrado -->
+      <div class="title-container">
+        <h1>Ferrepronto</h1>
+      </div>
+
+      <!-- Botones a la derecha como imágenes -->
+      <div class="right-buttons">
+        <a href="login.php" class="icon-btn">
+          <img src="img/usuarios_azul.png" alt="Iniciar Sesión" class="icon">
+        </a>
+        <a href="carrito.html" class="icon-btn">
+          <img src="img/carrito-de-compras_azul.png" alt="Carrito" class="icon">
+        </a>
+      </div>
+    </div>
+
+    <!-- Menú de navegación con buscador -->
+    <nav class="bottom-bar">
+      <div class="menu-links">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="PHP/catalogo.php">Catalogo</a>
+        <a href="atencion.html">Atencion a clientes</a>
+        <a href="informacion.html">Información</a>
+      </div>
+
+      <!-- Buscador -->
+      <div class="search-container">
+        <input type="text" placeholder="Buscar..." id="search-bar">
+        <button type="button" id="search-btn">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="banner" id="inicio">
+      <h1>Encuentra las mejores herramientas aquí</h1>
+    </div>
+
+    <section>
+      <h2>Bienvenido a Ferrepronto</h2>
+      <p>En Ferrepronto nos especializamos en ofrecerte las mejores herramientas y materiales de construcción, garantizando calidad, confianza y precios competitivos. Ya sea que estés trabajando en un proyecto pequeño o grande, tenemos todo lo que necesitas para hacerlo realidad. Navega por nuestro catálogo, encuentra las mejores opciones para tu trabajo y ¡hazlo más fácil con Ferrepronto!</p>
+      
+      <h3>Explora nuestras categorías y productos destacados</h3>
+      <p>Te ayudamos a hacer que cada proyecto sea más rápido y eficiente. En nuestro catálogo, encontrarás una amplia variedad de herramientas y materiales de construcción ideales para cualquier tipo de proyecto. Algunas marcas destacadas en nuestra tienda incluyen:</p>
+      
+      <ul>
+        <li><strong>Truper</strong> – Herramientas y productos confiables para profesionales y aficionados.</li>
+        <li><strong>Lion Tools</strong> – Calidad y tecnología para facilitar el trabajo en todo tipo de proyectos.</li>
+        <li><strong>IUSA</strong> – Materiales de alta resistencia y durabilidad para la construcción y más.</li>
+        <li><strong>Urrea</strong> – Reconocida por su excelencia en herramientas y accesorios para la industria.</li>
+        <li><strong>Volteck</strong> – Soluciones eléctricas y productos para instalaciones seguras y de calidad.</li>
+        <li><strong>Foset</strong> – Especialistas en productos de fontanería y sistemas hidráulicos de alto rendimiento.</li>
+      </ul>
+      
+      <h3>Promociones y ofertas</h3>
+      <p>En Ferrepronto, además de la calidad de nuestros productos, ofrecemos promociones para que tus proyectos sean aún más accesibles:</p>
+      <ul>
+        <li>Descuentos por volumen en compras grandes.</li>
+        <li>Envíos gratuitos en compras mayores a un monto específico.</li>
+        <li>Ofertas especiales para clientes recurrentes.</li>
+      </ul>
+    </section>     
+      
+      <section class="marcas">
+        <h2>Trabajamos con las mejores marcas</h2>
+        <div class="marcas-slider">
+          <div class="marca">
+            <img src="img/truper_2.png" alt="Marca 1">
+          </div>
+          <div class="marca">
+            <img src="img/lion.jpg" alt="Marca 2">
+          </div>
+          <div class="marca">
+            <img src="img/urrea_2.png" alt="Marca 3">
+          </div>
+          <div class="marca">
+            <img src="img/foset_2.jpg" alt="Marca 4">
+          </div>
+          <div class="marca">
+            <img src="img/iusa.jpg" alt="Marca 5">
+          </div>
+          <div class="marca">
+            <img src="img/volteck_2.jpg" alt="Marca 6">
+          </div>
+          <div class="marca">
+            <img src="img/pretul_2.png" alt="Marca 7">
+          </div>
+          <div class="marca">
+            <img src="img/hermex_2.png" alt="Marca 8">
+          </div>
+          <div class="marca">
+            <img src="img/tornillin_1.jpg" alt="Marca 9">
+          </div>
+        </div>
+      </section>
+      
+      <section class="descuentos">
+        <h2 class="titulo-animado">🔥 Descuentos Especiales 🔥</h2>
+        
+        <div class="botones-descuento">
+            <button class="btn-descuento" data-descuento="descuento1">30% de Descuento</button>
+            <button class="btn-descuento" data-descuento="descuento2">50% de Descuento y Envío Gratis</button>
+            <button class="btn-descuento" data-descuento="descuento3">Compra 1 y Llévate 2</button>
+            <button class="btn-descuento" data-descuento="descuento4">Descuento Exclusivo VIP</button>
+            <button class="btn-descuento" data-descuento="descuento5">Recompensas por Compras</button>
+            <button class="btn-descuento" data-descuento="descuento6">Promo Relámpago</button>
+        </div>
+        
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-text"></p>
+                <img id="modal-img" src="" alt="Promoción">
+            </div>
+        </div>
+    </section>    
+
+      <h1 class="titulo-espectacular">¡Aprovecha estos descuentos en nuestra ferretería!</h1>
+    <div class="cupones-container">
+        <div class="cupon">
+            <div class="descuento">15% de Descuento</div>
+            <div class="codigo" id="codigo1">FERRE15</div>
+            <button class="copiar" onclick="copiarCodigo('codigo1')">Copiar Código</button>
+        </div>
+        <div class="cupon">
+            <div class="descuento">20% en Herramientas</div>
+            <div class="codigo" id="codigo2">HERR20</div>
+            <button class="copiar" onclick="copiarCodigo('codigo2')">Copiar Código</button>
+        </div>
+        <div class="cupon">
+            <div class="descuento">10% en Materiales</div>
+            <div class="codigo" id="codigo3">MAT10</div>
+            <button class="copiar" onclick="copiarCodigo('codigo3')">Copiar Código</button>
+        </div>
+        <div class="cupon">
+            <div class="descuento">22% de Descuento</div>
+            <div class="codigo" id="codigo1">FERRE15</div>
+            <button class="copiar" onclick="copiarCodigo('codigo1')">Copiar Código</button>
+        </div>
+        <div class="cupon">
+            <div class="descuento">69% en Herramientas</div>
+            <div class="codigo" id="codigo2">HERR20</div>
+            <button class="copiar" onclick="copiarCodigo('codigo2')">Copiar Código</button>
+        </div>
+        <div class="cupon">
+            <div class="descuento">19% en Materiales</div>
+            <div class="codigo" id="codigo3">MAT10</div>
+            <button class="copiar" onclick="copiarCodigo('codigo3')">Copiar Código</button>
+        </div>
+        <div class="cupon">
+          <div class="descuento">77% de Descuento</div>
+          <div class="codigo" id="codigo1">FERRE15</div>
+          <button class="copiar" onclick="copiarCodigo('codigo1')">Copiar Código</button>
+      </div>
+      <div class="cupon">
+          <div class="descuento">47% en Herramientas</div>
+          <div class="codigo" id="codigo2">HERR20</div>
+          <button class="copiar" onclick="copiarCodigo('codigo2')">Copiar Código</button>
+      </div>
+      <div class="cupon">
+          <div class="descuento">99% en Materiales</div>
+          <div class="codigo" id="codigo3">MAT10</div>
+          <button class="copiar" onclick="copiarCodigo('codigo3')">Copiar Código</button>
+      </div>
+    </div>
+      
+  </main>
+
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+          <h3>Ubicación</h3>
+          <p>Calle Principal #123, Ciudad, País</p>
+      </div>
+      <div class="footer-column">
+          <h3>Contacto</h3>
+          <p>Teléfono: +123 456 789</p>
+          <p>Email: contacto@ferrepronto.com</p>
+      </div>
+      <div class="footer-column">
+          <h3>Horario de Atención</h3>
+          <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+          <p>Sábado: 9:00 AM - 2:00 PM</p>
+      </div>
+  </div>
+
+    <div class="footer-container">
+        <p>&copy; 2025 Ferrepronto. Todos los derechos reservados.</p>
+        
+        <div class="social-buttons">
+            <a href="#" class="social-btn facebook" title="Facebook">🔵</a>
+            <a href="#" class="social-btn whatsapp" title="WhatsApp">💚</a>
+            <a href="#" class="social-btn twitter" title="Twitter">🐦</a>
+        </div>
+
+        <div class="footer-columns">
+            <div class="footer-column">
+                <button onclick="openModal('info1')">Nosotros</button>
+            </div>
+            <div class="footer-column">
+                <button onclick="openModal('info2')">Servicios</button>
+            </div>
+            <div class="footer-column">
+                <button onclick="openModal('info3')">Contacto</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modales para la información -->
+<div id="info1" class="modal">
+    <div class="modal-content">
+        <h2>Nosotros</h2>
+        <p>"Ferrepronto es una ferretería comprometida con la calidad y el servicio. Contamos con una amplia variedad de herramientas, materiales y accesorios para la construcción, plomería, electricidad y carpintería. Nos esforzamos por ofrecer productos de alta calidad al mejor precio, garantizando la satisfacción de nuestros clientes."</p>
+        <button class="close-modal" onclick="closeModal('info1')">Cerrar</button>
+    </div>
+</div>
+
+<div id="info2" class="modal">
+    <div class="modal-content">
+        <h2>Servicios</h2>
+        <p>"En Ferrepronto ofrecemos una gama completa de servicios para facilitar tus proyectos:</p>
+        <p>✔️ Venta de herramientas y materiales de construcción.</p>
+        <p>✔️ Asesoría especializada en proyectos de remodelación y reparación.</p>
+        <p>✔️ Corte de materiales a medida.</p>
+        <p>✔️ Entrega a domicilio rápida y segura.</p>
+        <p>✔️ Servicio de instalación y mantenimiento.</p>
+        <p>Nuestro equipo de expertos está listo para ayudarte a encontrar la mejor solución para tu obra o reparación."</p>
+        <button class="close-modal" onclick="closeModal('info2')">Cerrar</button>
+    </div>
+</div>
+
+<div id="info3" class="modal">
+    <div class="modal-content">
+        <h2>Contacto</h2>
+        <p>"📍 Dirección: Calle Caliza #1035, Col. Las Piedras, S.L.P.</p>
+        <p>📞 Teléfono: +52 444 123 4567</p>
+        <p>📧 Correo: contacto@ferrepronto.com</p>
+        <p>⏰ Horario de Atención: Lunes a Sábado de 8:00 AM a 7:00 PM</p>
+        <p>📲 Síguenos en redes sociales para ofertas y novedades!"</p>
+        <button class="close-modal" onclick="closeModal('info3')">Cerrar</button>
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "flex";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+</script>
+
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

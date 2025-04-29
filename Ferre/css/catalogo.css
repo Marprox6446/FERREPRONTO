@@ -1,0 +1,350 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b3d6f; /* Fondo negro */
+    color: #fff;
+  }
+  
+  header.menu {
+    background-color: #01037e77; /* Fondo del menú */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  header.menu .logo img {
+    max-width: 200px; /* Tamaño del logo */
+    animation: zoomIn 1s ease-in-out; /* Animación al aparecer */
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  header.menu nav {
+    margin-top: 20px;
+  }
+  
+  header.menu .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header.menu .menu-items li {
+    margin: 0 15px;
+  }
+  
+  header.menu .menu-items li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  header.menu .menu-items li a:hover {
+    background-color: #0004ff77; /* Naranja chillón */
+    color: #000;
+    transform: scale(1.1);
+  }
+  
+  /* Sección del catálogo */
+  .catalogo {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .catalogo h2 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Naranja chillón */
+    margin-bottom: 20px;
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .producto {
+    background: #111; /* Fondo oscuro */
+    border: 2px solid #0013be; /* Borde naranja chillón */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(4, 0, 255, 0.774);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgb(25, 0, 255);
+  }
+  
+  .producto-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .producto-info {
+    padding: 15px;
+  }
+  
+  .producto-info h3 {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  
+  .precio {
+    color: #0004ff;
+    font-weight: bold;
+  }
+  
+  .btn-comprar {
+    background-color: #1900ff98;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-comprar:hover {
+    background-color: #fff;
+    color: #0400ff;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  /* Estilos generales para los enlaces principales */
+header.menu .menu-items li > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover para enlaces principales */
+header.menu .menu-items li > a:hover {
+  background-color: #1900ffd2; /* Naranja chillón */
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+}
+
+/* Estilos para el menú desplegable */
+.menu-items .dropdown-menu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  background-color: #222; /* Fondo oscuro */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+}
+
+/* Mostrar el menú desplegable al pasar por el contenedor */
+.menu-items li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Subopciones de "Marcas" (enlaces dentro del menú desplegable) */
+.menu-items .dropdown-menu li a {
+  display: block;
+  color: #fff; /* Color blanco */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: none; /* Sin animación */
+}
+
+/* Deshabilitar el hover de subopciones */
+.menu-items .dropdown-menu li a:hover {
+  background-color: transparent; /* Sin fondo naranja */
+  color: #fff; /* Mantener el color blanco */
+  transform: none; /* Sin efecto */
+}
+
+/* Imágenes de subopciones de "Marcas" */
+.dropdown-img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover solo para las imágenes */
+.dropdown-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgb(0, 183, 255);
+}
+/* Animación de resplandor y estilo metálico */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #0004ff, 0 0 10px #0004ff, 0 0 15px #0004ff, 0 0 20px #0004ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #0004ff, 0 0 20px #0004ff, 0 0 30px #0004ff, 0 0 40px #0004ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #0004ff, 0 0 10px #0004ff, 0 0 15px #0004ff, 0 0 20px #0004ff;
+  }
+}
+
+/* Estilo para el título */
+.titulo-marca {
+  color: #ffffff;  /* Naranja chillón */
+  font-size: 2.5em;  /* Tamaño grande */
+  font-weight: bold;  /* Negrita */
+  font-family: 'Rock Salt', cursive, sans-serif;  /* Fuente tipo metálica */
+  animation: glow 1.5s ease-in-out infinite;  /* Animación de resplandor */
+  text-align: center;  /* Centrado */
+  text-transform: uppercase;  /* Mayúsculas */
+  letter-spacing: 2px;  /* Espaciado entre letras */
+  margin-bottom: 15px;  /* Espacio abajo */
+}
+
+/* Estilo para el párrafo */
+.informacion-marca {
+  color: #ffffff;  /* Naranja chillón */
+  font-size: 1.2em;  /* Tamaño de fuente más pequeño que el título */
+  font-style: italic;  /* Cursiva */
+  font-family: 'Rock Salt', cursive, sans-serif;  /* Fuente metálica */
+  text-align: center;  /* Centrado */
+  letter-spacing: 1px;  /* Espaciado entre letras */
+}
+
+/* Estilos generales del footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo del texto de derechos reservados */
+footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para los botones sociales */
+.social-buttons {
+  margin: 20px 0;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #2f00ffd0;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0 15px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px rgb(0, 60, 255);
+}
+
+/* Colores específicos para cada red social */
+.social-btn.facebook {
+  background-color: #3b5998;
+}
+
+.social-btn.whatsapp {
+  background-color: #25D366;
+}
+
+.social-btn.twitter {
+  background-color: #1DA1F2;
+}
+
+/* Área de información adicional */
+.additional-info {
+  margin-top: 20px;
+  color: white;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.additional-info p {
+  margin: 10px 0;
+}
+
+/* Animación en el footer */
+footer {
+  animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes slideInUp {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.bienvenida {
+  background-color: #0004ff88; /* Azul traslúcido bonito */
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  animation: glow 2s ease-in-out infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.6);
+  text-align: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención a Clientes | Ferrepronto</title>
+    <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/atencion.css">
+</head>
+<body>
+
+<header>
+    <h1>Atención a Clientes/Ferrepronto</h1>
+    <a href="index.html" class="inicio-btn">Inicio</a>
+</header>
+
+<div class="container">
+    <h2>¡Estamos aquí para ayudarte!</h2>
+    <p>Si tienes alguna consulta, nuestro equipo está disponible para brindarte el mejor servicio.</p>
+
+    <div class="contact-info">
+        <p><strong>📍 Dirección:</strong> Calle Principal #123, Ciudad Ferretera, México</p>
+        <p><strong>📞 Teléfono:</strong> +52 55 1234 5678</p>
+        <p><strong>📧 Correo Electrónico:</strong> contacto@ferrepronto.com</p>
+        <p><strong>🕒 Horario de Atención:</strong> Lunes a Viernes de 8:00 AM a 6:00 PM</p>
+    </div>
+
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq">
+        <details>
+            <summary>¿Cuánto tarda en llegar mi pedido?</summary>
+            <p>El tiempo de entrega varía entre 3 a 5 días hábiles.</p>
+        </details>
+        <details>
+            <summary>¿Cuáles son los métodos de pago?</summary>
+            <p>Aceptamos pagos con tarjeta, transferencia bancaria y PayPal.</p>
+        </details>
+        <details>
+            <summary>¿Tienen garantía los productos?</summary>
+            <p>Sí, todos nuestros productos cuentan con garantía de fábrica.</p>
+        </details>
+    </div>
+
+    <h2>Envíanos un mensaje</h2>
+    <form class="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Ferrepronto. Todos los derechos reservados.</p>
+        <div class="social-buttons">
+            <a href="#" class="social-btn facebook" title="Facebook">🔵</a>
+            <a href="#" class="social-btn whatsapp" title="WhatsApp">💚</a>
+            <a href="#" class="social-btn twitter" title="Twitter">🐦</a>
+        </div>
+        <div class="additional-info">
+            <p>Este es un apartado de información adicional. Aquí puedes agregar más detalles acerca de la empresa, servicios, o cualquier otro dato importante.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Botón de Chat en Vivo -->
+<div class="chat-btn">💬 Chat en Vivo</div>
+
+<script>
+    document.querySelector(".chat-btn").addEventListener("click", function() {
+        alert("¡Hola! Un asesor se comunicará contigo en breve.");
+    });
+</script>
+
+</body>
+</html>
+

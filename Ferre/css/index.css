@@ -1,0 +1,600 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b3d6f; /* Fondo negro */
+    color: #b6ffff; /* Texto blanco */
+  }
+  
+  /* Header */
+  header {
+    background-color: #061647; /* Naranja chillón */
+    color: #fff; /* Blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Top Bar (Logo, Título y Botones) */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .title-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif; /* Fuente mecánica */
+    color: #fff;
+  }
+  
+  .right-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  /* Imagen del ícono */
+  .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Efecto de brillo más fuerte y dinámico */
+  .icon-btn::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 250%;
+    height: 250%;
+    background: radial-gradient(circle, rgba(135, 206, 250, 0.7) 0%, rgba(135, 206, 250, 0) 60%);
+    transition: opacity 0.4s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+  }
+  
+  /* Al pasar el cursor, resplandor y elevación */
+  .icon-btn:hover {
+    box-shadow: 0 0 25px rgba(135, 206, 250, 0.9);
+    transform: translateY(-3px);
+  }
+  
+  .icon-btn:hover::before {
+    opacity: 1;
+    transform: translate(50%, 50%);
+  }
+  
+  /* Al presionar, efecto de pulsación */
+  .icon-btn:active {
+    box-shadow: 0 0 30px rgba(135, 206, 250, 1);
+    transform: scale(0.96);
+  }
+  
+  
+  /* Bottom Bar (Menú y Buscador) */
+  .bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 1px solid #fff; /* Línea blanca para separar */
+  }
+  
+  .menu-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .menu-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif; /* Fuente mecánica */
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .menu-links a:hover {
+    background-color: #02091d; /* Naranja más oscuro */
+    transform: scale(1.05);
+  }
+  
+  .menu-links a.active {
+    background-color: #000000; /* Resaltar opción activa */
+    border-radius: 5px;
+  }
+  
+  /* Buscador */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  #search-bar {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #search-btn {
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #search-btn:hover {
+    background-color: #061647;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 40px 20px;
+  }
+  
+  .banner {
+    background-color: #061647; /* Naranja oscuro */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background-color: #333; /* Fondo gris oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  .marcas {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .marcas h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Naranja chillón */
+  }
+  
+  .marcas-slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    animation: slideIn 10s ease-in-out infinite;
+  }
+  
+  .marca {
+    width: 150px; /* Tamaño fijo para todas las imágenes */
+    height: 150px; /* Tamaño fijo para todas las imágenes */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .marca img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Hace que la imagen se ajuste sin distorsionarse */
+    transition: transform 0.3s;
+  }
+  
+  .marca img:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .descuentos {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.titulo-animado {
+    font-size: 3em;
+    background: linear-gradient(90deg, #00aaff, #0066ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #00aaff; }
+    100% { text-shadow: 0 0 20px #0066ff; }
+}
+
+.botones-descuento {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.btn-descuento {
+    padding: 15px;
+    font-size: 1.2em;
+    background: linear-gradient(135deg, #0044cc, #0099ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-descuento:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #0099ff, #0044cc);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+.modal-content img {
+  width: 100%; /* Para que ocupe todo el ancho disponible */
+  max-width: 300px; /* Limita el tamaño máximo */
+  height: auto; /* Mantiene la proporción original */
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Estilos generales del footer */
+footer {
+  background-color: #191970;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* Sección de información en columnas */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-column button {
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+.footer-column button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+/* Estilo del texto de derechos reservados */
+footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para los botones sociales */
+.social-buttons {
+  margin: 20px 0;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #061647;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0 15px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px rgb(77, 190, 255);
+}
+
+/* Colores específicos para cada red social */
+.social-btn.facebook {
+  background-color: #3b5998;
+}
+
+.social-btn.whatsapp {
+  background-color: #25D366;
+}
+
+.social-btn.twitter {
+  background-color: #1DA1F2;
+}
+
+/* Animación en el footer */
+footer {
+  animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes slideInUp {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* Asegura que los modales estén ocultos al inicio */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #002366;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  border: 3px solid transparent;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 10px #007bff;
+    border-color: #007bff;
+  }
+  100% {
+    box-shadow: 0px 0px 20px #00c3ff;
+    border-color: #00c3ff;
+  }
+}
+
+.close-modal {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-modal:hover {
+  background-color: darkred;
+}
+
+.cupones-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.cupon {
+  background: linear-gradient(135deg, #0033A0, #001F70);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.cupon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.descuento {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.codigo {
+  background: white;
+  color: #0033A0;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.copiar {
+  background: #ffcc00;
+  color: #0033A0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.copiar:hover {
+  background: #ffaa00;
+}
+
+
+/* Importar la fuente mecánica */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+/* Animación de destello */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; }
+    50% { text-shadow: 0 0 20px #ffffff, 0 0 40px #00bfff; }
+    100% { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; }
+}
+
+/* Animación de entrada con desvanecimiento */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Efecto de vibración futurista */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Estilo para el título */
+.titulo-espectacular {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out, glow 1.5s infinite alternate, glitch 0.1s infinite;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.titulo-espectacular:hover {
+    transform: scale(1.1);
+    animation: glow 1s infinite alternate, glitch 0.1s infinite;
+}

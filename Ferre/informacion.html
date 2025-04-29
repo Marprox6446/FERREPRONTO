@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Ferrepronto</title>
+    <link rel="icon" href="img/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/informacion.css">
+</head>
+<body>
+    <header >
+        <h1 class="fade-in">Nuestra Ferrepronto</h1>
+        <p class="fade-in">Ofrecemos calidad insuperable, confianza total y un servicio excepcional pensado para ti.</p>
+        <button class="video-btn" onclick="mostrarVideo()">🎥 Ver Video de ayuda</button>
+
+        <!-- Modal del video -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarVideo()">&times;</span>
+                <video id="videoPlayer" controls>
+                    <source src="vd/COMO COMPRAR HERRAMIENTAS TRUPER A PRECIO DE FABRICA(1080P_HD).mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </div>        
+    </header>
+
+    <section class="content">
+        <div class="box slide-in">
+            <h2>🛠️ Sobre Nosotros</h2>
+            <p>Somos una empresa comprometida con la excelencia, especializada en la distribución y comercialización de productos de alta calidad para los sectores de construcción, reparación y mantenimiento. Nuestro objetivo es proporcionar a nuestros clientes herramientas, materiales y soluciones innovadoras que garanticen eficiencia, durabilidad y seguridad en cada proyecto.</p>
+            <p>Nos destacamos por ofrecer una amplia gama de productos, desde herramientas manuales y eléctricas hasta materiales especializados para distintos tipos de obra, asegurando que cada profesional o entusiasta del bricolaje cuente con los insumos adecuados para alcanzar resultados óptimos.</p>
+            <p>Además, brindamos un servicio personalizado, asesoría técnica especializada y opciones de envío a domicilio, garantizando una experiencia de compra confiable, rápida y eficiente. Nuestra prioridad es la satisfacción de nuestros clientes, por lo que trabajamos constantemente para mejorar nuestra oferta y adaptarnos a las necesidades del mercado con productos de vanguardia y precios competitivos.</p>
+        </div>
+        
+        <div class="nosotros slide-in">
+            <h2>💡 Nuestros Servicios</h2>
+            <ul>
+                <li>
+                    Venta de herramientas y materiales
+                    <div class="info">
+                        Contamos con una amplia variedad de herramientas eléctricas y manuales, así como materiales de construcción y ferretería en general. Trabajamos con las mejores marcas del mercado para garantizar calidad y durabilidad en cada producto.
+                    </div>
+                </li>
+                <li>
+                    Asesoría especializada
+                    <div class="info">
+                        Nuestro equipo de expertos está listo para ayudarte a elegir la herramienta o el material adecuado para tus proyectos. Ya sea que necesites asesoría para construcción, plomería, carpintería o electricidad, te ofrecemos soluciones personalizadas según tus necesidades.
+                    </div>
+                </li>
+                <li>
+                    Envío a domicilio
+                    <div class="info">
+                        Ofrecemos servicio de entrega a domicilio para que recibas tus herramientas y materiales de manera rápida y segura sin salir de casa. Pregunta por nuestras opciones de envío express y cobertura en tu zona.
+                    </div>
+                </li>
+            </ul>
+        </div>                
+
+        <div class="box slide-in">
+            <h2>📍 Ubicación</h2>
+            <p>Nos encontramos en la mejor zona para tu comodidad.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.558605417308!2d-100.92875832425622!3d22.21887474584115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842aa0f1bc2e91a3%3A0xeb01f40a77fe7d6b!2sAv.%20M%C3%A9xico%2011%2C%20Puerta%20Real%2C%2078430%20Rancho%20Nuevo%2C%20S.L.P.!5e0!3m2!1ses!2smx!4v1740206937086!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <button class="back-btn" onclick="window.location.href='index.html'">⬅ Volver</button>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Ferrepronto. Todos los derechos reservados.</p>
+            <div class="social-buttons">
+                <a href="#" class="social-btn facebook" title="Facebook">🔵</a>
+                <a href="#" class="social-btn whatsapp" title="WhatsApp">💚</a>
+                <a href="#" class="social-btn twitter" title="Twitter">🐦</a>
+            </div>
+            <div class="additional-info">
+                <p>Este es un apartado de información adicional. Aquí puedes agregar más detalles acerca de la empresa, servicios, o cualquier otro dato importante.</p>
+            </div>
+        </div>
+    </footer>    
+
+    <script src="js/informacion.js"></script>
+</body>
+</html>
